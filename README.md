@@ -1,12 +1,31 @@
 # Compilado de Modelagem Computacional (Aulas 1 a 12)
 
+Este repositório reúne os projetos, simulações numéricas, análises de estabilidade e ambientes de Aprendizado por Reforço desenvolvidos ao longo das aulas de **Modelagem Computacional**. A estrutura dos arquivos segue a organização dos diretórios exibida no projeto:
+
+---
+
+## 📌 Sumário Geral
+
+1. [Aula 1: Simulação de Crescimento Populacional Logístico](https://www.google.com/search?q=%23aula-1-simula%C3%A7%C3%A3o-de-crescimento-populacional-log%C3%ADstico)
+2. [Aula 2: Modelo Logístico em Diferenças Finitas](https://www.google.com/search?q=%23aula-2-modelo-log%C3%ADstico-em-diferen%C3%A7as-finitas)
+3. [Aula 3: Análise de Estabilidade de Sistemas Dinâmicos Discretos (2D)](https://www.google.com/search?q=%23aula-3-an%C3%A1lise-de-estabilidade-de-sistemas-din%C3%A2micos-discretos-2d)
+4. [Aula 4: Análise de Estabilidade de Sistemas Dinâmicos Discretos (3D)](https://www.google.com/search?q=%23aula-4-an%C3%A1lise-de-estabilidade-de-sistemas-din%C3%A2micos-discretos-3d)
+5. [Aula 5: Modelagem Dinâmica com Competição Intraespecífica](https://www.google.com/search?q=%23aula-5-modelagem-din%C3%A2mica-com-competi%C3%A7%C3%A3o-intraespec%C3%ADfica)
+6. [Aula 6: Estimação de $\pi$ via Método de Monte Carlo e LCG](https://www.google.com/search?q=%23aula-6-estima%C3%A7%C3%A3o-de-%5Cpi-via-m%C3%A9todo-de-monte-carlo-e-lcg)
+7. [Aula 7: Simulação Estocástica de Controle de Estoque](https://www.google.com/search?q=%23aula-7-simula%C3%A7%C3%A3o-estoc%C3%A1stica-de-controle-de-estoque)
+8. [Aula 8: Simulação de Eventos Discretos — Gestão de Estoque de Pneus](https://www.google.com/search?q=%23aula-8-simula%C3%A7%C3%A3o-de-eventos-discretos--gest%C3%A3o-de-estoque-de-pneus)
+9. [Aula 9: Análise Comparativa de Desempenho Escolar (Teste t vs. Permutação)](https://www.google.com/search?q=%23aula-9-an%C3%A1lise-comparativa-de-desempenho-escolar-teste-t-vs-permuta%C3%A7%C3%A3o)
+10. [Aula 10: Aprendizado por Reforço com CartPole-v0](https://www.google.com/search?q=%23aula-10-aprendizado-por-refor%C3%A7o-com-cartpole-v0)
+11. [Aula 11: Controle Contínuo em MountainCarContinuous-v0](https://www.google.com/search?q=%23aula-11-controle-cont%C3%ADnuo-em-mountaincarcontinuous-v0)
+12. [Aula 12: Ambiente Personalizado Gymnasium — ShowerEnv](https://www.google.com/search?q=%23aula-12-ambiente-personalizado-gymnasium--showerenv)
+
 ---
 
 ## Aula 1: Simulação de Crescimento Populacional Logístico
 
 Este projeto realiza a modelagem computacional e simulação numérica do crescimento populacional logístico ao longo de 19 horas, comparando os resultados teóricos com dados experimentais reais.
 
-### 📌 Modelo Matemático
+### 📐 Modelo Matemático
 
 A simulação utiliza o método numérico discreto para aproximar a equação logística:
 
@@ -22,20 +41,20 @@ Onde:
 ### 🛠️ Tecnologias Utilizadas
 
 * **Python 3**
-* **NumPy** — Manipulação e criação de vetores
-* **Matplotlib** — Geração e visualização dos gráficos de comparação
+* **NumPy** — Manipulação de vetores e matrizes
+* **Matplotlib** — Visualização e geração de gráficos comparativos
 
 ### 🚀 Como Executar
 
 ```bash
 pip install numpy matplotlib
-python Crescimento_Populacional.py
+python "Aulas/Aula 1/Crescimento_Populacional.py"
 
 ```
 
 ### 📊 Resultados
 
-O script gera 10 gráficos comparando a curva exata dos dados reais com 4 curvas simuladas para diferentes coeficientes de $k$ sob variadas populações limite ($P_{\text{lim}}$).
+O script gera 10 gráficos comparando a curva dos dados reais com 4 curvas simuladas para diferentes coeficientes de $k$ sob variadas populações limite ($P_{\text{lim}}$).
 
 ---
 
@@ -51,13 +70,13 @@ O objetivo é comparar dados empíricos observados ao longo de 19 horas com simu
 
 * **Python 3**
 * **NumPy**: Manipulação de vetores e cálculos numéricos.
-* **Matplotlib**: Visualização e plotagem gráfica das curvas do modelo em comparação com os dados reais.
+* **Matplotlib**: Visualização gráfica das curvas do modelo em comparação com os dados reais.
 
 ### 🚀 Como Executar
 
 ```bash
 pip install numpy matplotlib
-python Decaimento_de_Concentracao.py
+python "Aulas/Aula 2/Decaimento_concentracao.py"
 
 ```
 
@@ -87,7 +106,7 @@ A função de transição $F(R, J)$ é dada por:
 
 $$F(R, J) = \begin{bmatrix} a_R R + p_R J \\ p_J R + a_J J \end{bmatrix}$$
 
-Com os parâmetros $a_R = 0{,}5$, $a_J = 0{,}7$, $p_R = 0{,}2$ e $p_J = 0{,}5$:
+Aplicando os parâmetros ($a_R = 0{,}5$, $a_J = 0{,}7$, $p_R = 0{,}2$ e $p_J = 0{,}5$):
 
 $$F(R, J) = \begin{bmatrix} 0{,}5 R + 0{,}2 J \\ 0{,}5 R + 0{,}7 J \end{bmatrix}$$
 
@@ -101,7 +120,7 @@ $$J_M = \begin{bmatrix} \frac{\partial F_1}{\partial R} & \frac{\partial F_1}{\p
 3. **Autovalores ($\lambda$):** Obtenção dos autovalores da matriz Jacobiana.
 4. **Critério de Estabilidade Discreta:**
 * Se $\vert{}\lambda\vert{} < 1$ para todos os autovalores, o ponto fixo é **Estável**.
-* Se pelo menos um autovalor satisfizer $\vert{}\lambda\vert{} > 1$, o ponto fixo é **Instável**.
+* Se pelo menos um autovalor satisfazer $\vert{}\lambda\vert{} > 1$, o ponto fixo é **Instável**.
 
 
 
@@ -109,7 +128,7 @@ $$J_M = \begin{bmatrix} \frac{\partial F_1}{\partial R} & \frac{\partial F_1}{\p
 
 ```bash
 pip install sympy
-python modelagem_computacional_3.py
+python "Aulas/Aula 3/Analise_Sensibilidade_Linear.py"
 
 ```
 
@@ -125,7 +144,7 @@ O sistema é representado por $u_{k+1} = F(u_k)$, onde o vetor de estados é:
 
 $$u = \begin{bmatrix} O \\ H \\ M \end{bmatrix}$$
 
-A função de transição não linear $F(O, H, M)$ é expressa por:
+A função de transição não linear $F(O, H, M)$ é dada por:
 
 $$F(O, H, M) = \begin{bmatrix} (1+k_1) O - k_4 O H + k_9 O M \\ (1+k_2) H - k_5 O H + k_8 H M \\ (1+k_3) M - k_6 O M - k_7 H M \end{bmatrix}$$
 
@@ -149,7 +168,7 @@ $$J_M = \begin{bmatrix}  \frac{\partial F_1}{\partial O} & \frac{\partial F_1}{\
 
 ```bash
 pip install sympy
-python modelagem_computacional_4.py
+python "Aulas/Aula 4/Analise_Sensibiliade_nao_linear.py"
 
 ```
 
@@ -161,7 +180,7 @@ Simulação e análise de um sistema dinâmico discreto de duas populações int
 
 ### 📐 Modelo Matemático
 
-$$\begin{cases} f_{n+1} = (1 + g_0) f_n - c_0 f_n r_n - d_0 f_n^2 \\ r_{n+1} = (1 + g_1) r_n - c_1 f_n r_n - d_1 r_n^2 \end{cases}$$
+$$\begin{cases}  f_{n+1} = (1 + g_0) f_n - c_0 f_n r_n - d_0 f_n^2 \\  r_{n+1} = (1 + g_1) r_n - c_1 f_n r_n - d_1 r_n^2  \end{cases}$$
 
 Onde:
 
@@ -186,7 +205,7 @@ Onde:
 
 ```bash
 pip install sympy pandas matplotlib
-python modelagem_computacional_5.py
+python "Aulas/Aula 5/Sistema_Dinamico.py"
 
 ```
 
@@ -223,7 +242,7 @@ Com parâmetros: $a = 7^5 = 16807$, $b = 0$, $c = 62$.
 
 ```bash
 pip install numpy matplotlib
-python modelagem_computacional_1_3.py
+python "Aulas/Aula 6/Monte_Carlo.py"
 
 ```
 
@@ -241,7 +260,7 @@ $$X_{n+1} = (a \cdot X_n + b) \pmod c \quad (a = 16807, b = 0, c = 61)$$
 
 #### 2. Distribuição da Demanda Mensal ($Y$)
 
-Variable aleatória discreta $Y \in \{1, 2, 3, 4\}$:
+Variável aleatória discreta $Y \in \{1, 2, 3, 4\}$:
 
 $$P(Y = y) = \begin{cases}  0{,}1, & \text{se } y = 1 \\  0{,}2, & \text{se } y = 2 \\  0{,}6, & \text{se } y = 3 \\  0{,}1, & \text{se } y = 4  \end{cases}$$
 
@@ -257,7 +276,7 @@ A cada mês ($R = 100$):
 
 ```bash
 pip install numpy matplotlib
-python modelagem_computacional_7.py
+python "Aulas/Aula 7/simulacao_estocastica.py"
 
 ```
 
@@ -265,104 +284,34 @@ python modelagem_computacional_7.py
 
 ## Aula 8: Simulação de Eventos Discretos — Gestão de Estoque de Pneus
 
-Simulação de eventos discretos (Monte Carlo) para a gestão de estoque de um lote de pneus ao longo de 52 semanas, modelando incertezas nos tempos de entrega e demanda diária.
+Simulação de eventos discretos e Monte Carlo em Python para modelar o comportamento do nível de estoque e a lucratividade acumulada de uma revenda de pneus ao longo de 52 semanas.
 
-### 💻 Código-Fonte
+### 📐 Modelo Matemático
 
-```python
-import time
-import matplotlib.pyplot as plt
+#### 1. Gerador Congruencial Linear (LCG)
 
-def lcg_random(quantidade, seed=None):
-    c = 2**31 - 1    # 2147483647
-    if seed is None:
-        seed = int(time.time() * 1000) % c
-    a = 7**5         # 16807
-    
-    numeros = []
-    estado = seed
-    for _ in range(quantidade):
-        estado = (a * estado) % c
-        numeros.append(estado / c)
-    return numeros
+$$X_{n+1} = (a \cdot X_n) \pmod c \quad (a = 16807, c = 2^{31} - 1)$$
 
-def AtrasoSemanal(x):
-    if x <= 0.3:
-        return 1
-    elif x <= 0.7:
-        return 2
-    else:
-        return 3
+#### 2. Inversão da Distribuição Acumulada
 
-def DemandaDiaria(x):
-    if x <= 0.05:
-        return 25
-    elif x <= 0.15:
-        return 30
-    elif x <= 0.35:
-        return 35
-    elif x <= 0.65:
-        return 40
-    elif x <= 0.85:
-        return 45
-    elif x <= 0.95:
-        return 50
-    else:
-        return 55
+* **Atraso na Entrega ($A$):** $P(A=1)=0{,}30$, $P(A=2)=0{,}40$, $P(A=3)=0{,}30$.
+* **Demanda Diária ($D$):** Valores em $\{25, 30, 35, 40, 45, 50, 55\}$ com probabilidades acumuladas associadas.
 
-semanas = 52
-custoPneu = 100        
-custoFalta = 80        
-custoEstoque = 5       
-recarga = 240          
-estoque = 0
-lucro = 0
-atrasoPassado = 0
+### ⚙️ Regras de Negócio e Parâmetros
 
-aleatorios = lcg_random(semanas * 10, seed=12345)
-rnd_idx = 0
+* **Preço de Venda:** $100 / unidade
+* **Custo de Falta (Penalidade):** $80 / unidade não atendida
+* **Custo de Estocagem:** $5 / unidade restante por dia
+* **Lote de Reposição (Recarga):** 240 unidades por ciclo
+* **Duração da Simulação:** 52 semanas
 
-Lucro_list, DemandaSemanal_list, DemandaDia_list, Estoque_list = [], [], [], []
+### 🚀 Como Executar
 
-for i in range(semanas):
-    atrasoAtual = AtrasoSemanal(aleatorios[rnd_idx])
-    rnd_idx += 1
-    
-    diasSemEntrega = 6 + atrasoAtual - atrasoPassado
-    estoque += recarga
-    
-    for _ in range(diasSemEntrega):
-        demanda = DemandaDiaria(aleatorios[rnd_idx])
-        rnd_idx += 1
-        
-        if estoque < demanda:
-            lucro += estoque * custoPneu
-            lucro -= (demanda - estoque) * custoFalta
-            estoque = 0
-        else:
-            lucro += demanda * custoPneu
-            estoque -= demanda
-            lucro -= estoque * custoEstoque
-            
-        Lucro_list.append(lucro)
-        Estoque_list.append(estoque)
-        DemandaDia_list.append(demanda)
-        
-    DemandaSemanal_list.append(sum(DemandaDia_list))
-    DemandaDia_list = []
-    atrasoPassado = atrasoAtual
-
-media_demanda = sum(DemandaSemanal_list) / len(DemandaSemanal_list)
-print(f"Demanda semanal média: {media_demanda:.2f}")
-print(f"Total dias simulados: {len(Lucro_list)}")
+```bash
+pip install matplotlib
+python "Aulas/Aula 8/Simulacao_Financeira.py"
 
 ```
-
-### 🔬 Análise e Recomendações
-
-1. **Truncamento de Semente no LCG:** Aplicar o módulo $c = 2^{31}-1$ na semente gerada via timestamp previne *overflow* antes do primeiro ciclo do gerador.
-2. **Custo de Aquisição:** Para apurar o lucro líquido real, deve-se abater o custo unitário de compra ($c_{\text{compra}}$) a cada recebimento do lote de recarga (`lucro -= recarga * custoAquisicao`).
-3. **Dimensionamento Aleatório:** A reserva de $520$ números aleatórios garante cobertura completa para a duração máxima de ciclos ($52 \times 10$ chamadas no pior caso).
 
 ---
 
@@ -377,23 +326,11 @@ Análise estatística inferencial comparando o desempenho médio em exames entre
 | **Teste t de Student** | Paramétrico | Exige normalidade da distribuição subjacente das notas. |
 | **Teste de Permutação** | Não-paramétrico | Livre de distribuição; constrói a distribuição nula empírica via 10.000 reamostragens sem reposição. |
 
-### 🛠️ Código e Pipeline de Execução
-
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy import stats
-
-# Processamento de dados e filtragem por presenca == 1
-# Execução do Teste-t e Simulação Monte Carlo (10.000 permutações)
-
-```
-
 ### 🚀 Como Executar
 
 ```bash
 pip install numpy matplotlib scipy
-python modelagem_computacional_9.py
+python "Aulas/Aula 9/Analise_estatistica.py"
 
 ```
 
@@ -416,11 +353,11 @@ Introdução aos ambientes de Aprendizado por Reforço da biblioteca **OpenAI Gy
 | **2** | Ângulo do mastro | -0.418 rad (-24°) | 0.418 rad (24°) |
 | **3** | Velocidade angular | $-\infty$ | $\infty$ |
 
-### 🛠️ Requisitos e Configuração *Headless*
+### 🚀 Como Executar
 
 ```bash
 pip install gymnasium numpy opencv-python moviepy
-apt-get install python-opengl xvfb -y
+python "Aulas/Aula 10/OpenIA_Gym.py"
 
 ```
 
@@ -440,11 +377,11 @@ Configuração e avaliação de políticas em um ambiente de controle contínuo,
 | **0** | Posição do carrinho | -1.2 | 0.6 |
 | **1** | Velocidade do carrinho | -0.07 | 0.07 |
 
-### 🛠️ Configuração de Ambientes sem Display (*Headless*)
+### 🚀 Como Executar
 
 ```bash
 pip install gymnasium box2d-py pyvirtualdisplay numpy opencv-python moviepy
-apt-get install python-opengl xvfb -y
+python "Aulas/Aula 11/OpenIA_MountainCarContinuous.py"
 
 ```
 
@@ -480,6 +417,6 @@ $$r = -\left( \vert{}T_{\text{mix}} - T_{\text{alvo}}\vert{} + 0.1 \cdot (F_{\te
 
 ```bash
 pip install gymnasium numpy matplotlib
-python modelagem_computacional_12.py
+python "Aulas/Aula 12/Reinforcement_Learning.py"
 
 ```
