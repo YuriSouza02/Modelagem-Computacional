@@ -11,7 +11,7 @@ Este repositório reúne os projetos, simulações numéricas, análises de esta
 3. [Aula 3: Análise de Estabilidade de Sistemas Dinâmicos Discretos (2D)](https://www.google.com/search?q=%23aula-3-an%C3%A1lise-de-estabilidade-de-sistemas-din%C3%A2micos-discretos-2d)
 4. [Aula 4: Análise de Estabilidade de Sistemas Dinâmicos Discretos (3D)](https://www.google.com/search?q=%23aula-4-an%C3%A1lise-de-estabilidade-de-sistemas-din%C3%A2micos-discretos-3d)
 5. [Aula 5: Modelagem Dinâmica com Competição Intraespecífica](https://www.google.com/search?q=%23aula-5-modelagem-din%C3%A2mica-com-competi%C3%A7%C3%A3o-intraespec%C3%ADfica)
-6. [Aula 6: Estimação de $\pi$ via Método de Monte Carlo e LCG](https://www.google.com/search?q=%23aula-6-estima%C3%A7%C3%A3o-de-%5Cpi-via-m%C3%A9todo-de-monte-carlo-e-lcg)
+6. [Aula 6: Estimação de pi via Método de Monte Carlo e LCG](https://www.google.com/search?q=%23aula-6-estima%C3%A7%C3%A3o-de-%5Cpi-via-m%C3%A9todo-de-monte-carlo-e-lcg)
 7. [Aula 7: Simulação Estocástica de Controle de Estoque](https://www.google.com/search?q=%23aula-7-simula%C3%A7%C3%A3o-estoc%C3%A1stica-de-controle-de-estoque)
 8. [Aula 8: Simulação de Eventos Discretos — Gestão de Estoque de Pneus](https://www.google.com/search?q=%23aula-8-simula%C3%A7%C3%A3o-de-eventos-discretos--gest%C3%A3o-de-estoque-de-pneus)
 9. [Aula 9: Análise Comparativa de Desempenho Escolar (Teste t vs. Permutação)](https://www.google.com/search?q=%23aula-9-an%C3%A1lise-comparativa-de-desempenho-escolar-teste-t-vs-permuta%C3%A7%C3%A3o)
